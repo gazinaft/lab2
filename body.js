@@ -11,25 +11,6 @@ const construct = id => ({
 });
 
 
-const showAll = () => {
-    let i = 0;
-    header.value = '';
-    textArea.innerHTML = '';
-    for (const id in localStorage) {
-        const item = document.createElement('div');
-        const content = JSON.parse(localStorage.getItem(id));
-
-        item.innerHTML = `${content.header} <br><br> ${content.date}`;
-        item.className = 'passive';
-        item.style.gridRowStart = +(localStorage.length - i - 1);
-        item.style.gridRowEnd = +(localStorage.length - i);
-        item.addEventListener('click', makeActive(id));
-        item.id = content.id;
-        sidebar.prepend(item);
-        ++i;
-    }
-}
-
 
 const makeActive = id => {
     const content = JSON.parse(localStorage.getItem(id));
@@ -43,6 +24,26 @@ const makeActive = id => {
     }
     tag.className = "active";
     location.hash = content.id;
+}
+
+
+const showAll = () => {
+    let i = 0;
+    header.value = '';
+    textArea.innerHTML = '';
+    for (const id in localStorage) {
+        const item = document.createElement('div');
+        const content = JSON.parse(localStorage.getItem(id));
+
+        item.innerHTML = `${content.header} <br><br> ${content.date}`;
+        item.className = 'passive';
+        item.style.gridRowStart = +(localStorage.length - i - 1);
+        item.style.gridRowEnd = +(localStorage.length - i);
+        item.id = content.id;
+        sidebar.prepend(item);
+        item.addEventListener('click', makeActive(id));
+        ++i;
+    }
 }
 
 const refresh = () => {
