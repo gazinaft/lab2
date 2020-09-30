@@ -15,7 +15,7 @@ const showAll = () => {
     let i = 0;
     header.value = "";
     textArea.innerHTML = "";
-    for (id in localStorage) {
+    for (const id in localStorage) {
         const item = document.createElement("div");
         const content = JSON.parse(localStorage.getItem(id));
 
