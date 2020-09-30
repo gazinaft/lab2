@@ -6,10 +6,10 @@ const saveButton = document.getElementById('save');
 const deleteButton = document.getElementById('delete');
 const form = document.getElementById('forma');
 const formatter = Intl.DateTimeFormat('ru', {
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
-    year: "numeric",
-    month: "numeric",
-    day: "numeric"
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric'
 });
