@@ -13,17 +13,17 @@ const construct = id => ({
 
 const showAll = () => {
     let i = 0;
-    header.value = "";
-    textArea.innerHTML = "";
+    header.value = '';
+    textArea.innerHTML = '';
     for (const id in localStorage) {
-        const item = document.createElement("div");
+        const item = document.createElement('div');
         const content = JSON.parse(localStorage.getItem(id));
 
         item.innerHTML = `${content.header} <br><br> ${content.date}`;
-        item.className = "passive";
+        item.className = 'passive';
         item.style.gridRowStart = +(localStorage.length - i - 1);
         item.style.gridRowEnd = +(localStorage.length - i);
-        item.addEventListener("click", makeActive(id));
+        item.addEventListener('click', makeActive(id));
         item.id = content.id;
         sidebar.prepend(item);
         ++i;
@@ -37,7 +37,10 @@ const makeActive = id => {
 
     header.value = content.header;
     textArea.innerHTML = content.text;
-    document.getElementsByClassName("active")?.className = "passive";
+    const actives = document.getElementsByClassName('active');
+    if (actives.length != 0) {
+        actives[0].className = 'passive';
+    }
     tag.className = "active";
     location.hash = content.id;
 }
