@@ -46,9 +46,7 @@ const makeActive = id => {
 }
 
 const refresh = () => {
-    for (const child in sidebar.children) {
-        sidebar.removeChild(child);
-    }
+    sidebar.textContent = '';
     showAll();
 }
 
