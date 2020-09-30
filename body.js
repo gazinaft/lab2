@@ -6,7 +6,7 @@ const generateId = header => header.split(' ')[0] + Date.now();
 const construct = id => ({
     id: id,
     header: header.value,
-    text: textArea.innerHTML,
+    text: textArea.value,
     date: formatter.format(Date.now()),  
 });
 
