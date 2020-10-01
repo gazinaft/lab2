@@ -14,6 +14,8 @@ const construct = id => ({
 
 const makeActive = id => {
 
+    console.log('seredina');
+
     if (localStorage.getItem(id) == null) {
         return;
     }
@@ -49,7 +51,9 @@ const showAll = () => {
         item.style.gridRowEnd = +(localStorage.length - i);
         item.id = content.id;
         sidebar.prepend(item);
+        console.log('proverka');
         item.addEventListener('click', makeActive(id));
+        console.log('konets');
         ++i;
     }
 }
