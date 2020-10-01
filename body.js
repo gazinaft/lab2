@@ -33,6 +33,8 @@ const showAll = () => {
     textArea.innerHTML = '';
     for (const id in localStorage) {
         const item = document.createElement('div');
+        console.log(id);
+        console.log(localStorage.getItem(id));
         const content = JSON.parse(localStorage.getItem(id));
 
         item.innerHTML = `${content.header} <br><br> ${content.date}`;
