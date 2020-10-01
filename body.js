@@ -36,7 +36,9 @@ const showAll = () => {
         console.log(id);
         console.log(localStorage.getItem(id));
         const content = JSON.parse(localStorage.getItem(id));
-
+        if (content == null) {
+            break;
+        }
         item.innerHTML = `${content.header} <br><br> ${content.date}`;
         item.className = 'passive';
         item.style.gridRowStart = +(localStorage.length - i - 1);
@@ -55,7 +57,7 @@ const refresh = () => {
 
 const save = () => {
     if (getHash() != '') {
-        //localStorage.removeItem(getHash());
+        localStorage.removeItem(getHash());
     }
     const item = construct(generateId(header.value));
     localStorage.setItem(item.id, JSON.stringify(item));
