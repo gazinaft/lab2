@@ -68,3 +68,13 @@ const delet = () => {
     localStorage.removeItem(getHash());
     refresh();
 }
+
+const create = () => {
+    const actives = document.getElementsByClassName('active');
+    if (actives.length != 0) {
+        actives[0].className = 'passive';
+    }
+    location.hash = '';
+    header.value = '';
+    textArea.value = '';
+}
