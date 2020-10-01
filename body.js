@@ -55,7 +55,7 @@ const refresh = () => {
 
 const save = () => {
     if (getHash() != '') {
-        localStorage.removeItem(getHash());
+        //localStorage.removeItem(getHash());
     }
     const item = construct(generateId(header.value));
     localStorage.setItem(item.id, JSON.stringify(item));
