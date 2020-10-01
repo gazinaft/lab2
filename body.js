@@ -13,6 +13,10 @@ const construct = id => ({
 
 
 const makeActive = id => {
+
+    if (localStorage.getItem(id) == null) {
+        return;
+    }
     const content = JSON.parse(localStorage.getItem(id));
     const tag = document.getElementById(id);
 
