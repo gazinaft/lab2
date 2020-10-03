@@ -38,27 +38,30 @@ html, body {
   }
   
   .mybutton {
-    float: right;
+    float: left;
     margin: 5px;
-    width: 100px;
-    height: 40px;
-    font-size: 20px;
+    width: 110px;
+    height: 50px;
+    font-size: 25px;
+    vertical-align: bottom;
+    background-color: #f5f0e1;
+    color: #1e3d59;
   }
 
   .active {
-    background-color: coral;
-    color: black;
+    background-color: #ff6e40;
+    color: #1e3d59;
   }
 
   .passive {
-    background-color: black;
-    color: white;
+    background-color: #f5f0e1;
+    color: #1e3d59;
   }
 
   /* OTHER STYLES */
   
   body {
-    background-color: #3b404e;
+    background-color: #1e3d59;
     display: flex;
     justify-content: center;
     padding: 5px;
@@ -66,8 +69,7 @@ html, body {
   }
   
   .item {
-    background-color: #1EAAFC;
-    background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+    background-color: #1e3d59;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     color: #ffffff;
 
@@ -79,17 +81,16 @@ html, body {
   }
   
   .header {
-    background-color: #1EAAFC;
-    background-image: linear-gradient(160deg, #6C52D9 0%, #9B8AE6 127%);
+    background-color: #ffc13b;
   }
   
   .sidebar {
-    background-image: linear-gradient(203deg, #3EDFD7 0%, #29A49D 90%)
+    background-color: #1e3d59;
   }
   
   .content-1,
   .content-2,
   .content-3 {
-    background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+    background-color: #1e3d59;
   }
   
