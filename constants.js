@@ -11,6 +11,6 @@ const formatter = Intl.DateTimeFormat('ru', {
     minute: 'numeric',
     second: 'numeric',
     year: 'numeric',
-    month: 'numeric',
+    month: 'short',
     day: 'numeric'
 });
