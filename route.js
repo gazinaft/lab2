@@ -8,9 +8,9 @@ const checkURL = () => {
         textArea.value = '';
         header.value = '';
     }
-    for (const cont of loadLocal()) {
-        if (cont.id === url) {
-            makeActive(cont.id)();
+    for (const id in localStorage) {
+        if (id === url) {
+            makeActive(id)();
         }
     }
 }
